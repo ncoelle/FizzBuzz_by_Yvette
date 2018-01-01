@@ -26,10 +26,12 @@ class Brain {
   func check(number: Int) -> String {
     if isDivisibleByFifteen(number) {
       return "FizzBuzz"
+    } else if isDivisibleByFive(number) {
+      return "Buzz"
     } else if isDivisibleByThree(number) {
       return "Fizz"
     } else {
-      return "Buzz"
+      return "\(number)"
     }
   }
 }
