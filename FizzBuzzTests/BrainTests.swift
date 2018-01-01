@@ -86,4 +86,10 @@ class BrainTests: XCTestCase {
     XCTAssertEqual(result, "FizzBuzz",
         "Divisible by 15 should return 'FizzBuzz'")
   }
+
+  func testOneReturnsOne() {
+    let result = brain.check(number: 1)
+    XCTAssertEqual(result, "1",
+        "Divisible by nothing should return 1")
+  }
 }
