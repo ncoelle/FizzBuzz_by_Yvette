@@ -43,4 +43,12 @@ class BrainTests: XCTestCase {
         "5 should be divisible by 5")
   }
 
+  func testIsOneDivisibleByFive() {
+    let brain = Brain()
+    let result = brain.isDivisibleByFive(1)
+
+    XCTAssertEqual(result, false,
+        "1 must not be divisible by 5")
+  }
+
 }
