@@ -14,4 +14,8 @@ class Brain {
   func isDivisibleByFive(_ number: Int) -> Bool {
     return number % 5 == 0
   }
+
+  func isDivisibleByThreeAndFive(_ number: Int) -> Bool {
+    fatalError("isDivisibleByThreeAndFive(i:) has not been implemented")
+  }
 }
