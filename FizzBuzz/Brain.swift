@@ -12,6 +12,6 @@ class Brain {
   }
 
   func isDivisibleByFive(_ number: Int) -> Bool {
-    return true
+    return number % 5 == 0
   }
 }
