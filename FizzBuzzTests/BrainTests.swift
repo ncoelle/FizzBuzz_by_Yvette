@@ -74,4 +74,10 @@ class BrainTests: XCTestCase {
     XCTAssertEqual(result, "Fizz",
         "Divisible by 3 should return 'Fizz'")
   }
+
+  func testSayBuzz() {
+    let result = brain.check(number: 5)
+    XCTAssertEqual(result, "Buzz",
+        "Divisible by 5 should return 'Buzz'")
+  }
 }
