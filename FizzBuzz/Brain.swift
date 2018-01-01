@@ -15,7 +15,7 @@ class Brain {
     return number % 5 == 0
   }
 
-  func isDivisibleByThreeAndFive(_ number: Int) -> Bool {
-    return isDivisibleByThree(number) && isDivisibleByFive(number)
+  func isDivisibleByFifteen(_ number: Int) -> Bool {
+    return number % 15 == 0
   }
 }

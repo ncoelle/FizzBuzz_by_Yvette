@@ -48,24 +48,24 @@ class BrainTests: XCTestCase {
         "1 must not be divisible by 5")
   }
 
-  func testIsFifteenDivisibleByFiveAndThree() {
-    let result = brain.isDivisibleByThreeAndFive(15)
+  func testIsFifteenDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(15)
 
     XCTAssertEqual(result, true,
-        "15 should be divisible by 5 and by 3")
+        "15 should be divisible by 15")
   }
 
-  func testIsThreeDivisibleByFiveAndThree() {
-    let result = brain.isDivisibleByThreeAndFive(3)
+  func testIsThreeDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(3)
 
     XCTAssertEqual(result, false,
-        "3 must not be divisible by 5 and by 3")
+        "3 must not be divisible by 15")
   }
 
-  func testIsFiveDivisibleByFiveAndThree() {
-    let result = brain.isDivisibleByThreeAndFive(3)
+  func testIsFiveDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(3)
 
     XCTAssertEqual(result, false,
-        "5 must not be divisible by 5 and by 3")
+        "5 must not be divisible by 15")
   }
 }
