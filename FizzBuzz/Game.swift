@@ -1,9 +1,3 @@
-//
-//  FizzBuzzTests
-//
-//  Copyright © 2018 Cölle Online. All rights reserved.
-//
-
 import Foundation
 
 class Game {

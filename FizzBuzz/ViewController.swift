@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  FizzBuzz
-//
-//  Created by Niels Cölle on 01.01.18.
-//  Copyright © 2018 Cölle Online. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
