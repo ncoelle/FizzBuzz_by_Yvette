@@ -5,7 +5,8 @@ class ViewController: UIViewController {
   var game: Game?
   var gameScore: Int? {
     didSet {
-      numberButton.setTitle("1", for: .normal)
+      guard let unwrappedScore = gameScore else { fatalError("gameScore not unwrapped") }
+      numberButton.setTitle("\(unwrappedScore)", for: .normal)
     }
   }
 
@@ -14,6 +15,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     game = Game()
+
+    guard let checkedGame = game else { fatalError("Could not unwrap game in ViewController") }
+    gameScore = checkedGame.score
   }
 
   override func didReceiveMemoryWarning() {
@@ -22,7 +26,11 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
-    play(move: "1")
+    guard let unwrappedScore = gameScore else {
+      fatalError("gameScore not initialized in ViewController")
+    }
+    let nextScore: Int = unwrappedScore + 1
+    play(move: "\(nextScore)")
   }
 
   func play(move: String) {
