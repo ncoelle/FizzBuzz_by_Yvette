@@ -13,7 +13,8 @@ class Game {
     score = 0
   }
 
-  func play() {
-    score = 1
+  func play(move: String) -> Bool {
+    score += 1
+    return true
   }
 }
