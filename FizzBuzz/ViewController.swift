@@ -29,15 +29,16 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
-    if sender == numberButton {
+    switch sender {
+    case numberButton:
       play(move: .number)
-    } else if sender == fizzButton {
+    case fizzButton:
       play(move: .fizz)
-    } else if sender == buzzButton {
+    case buzzButton:
       play(move: .buzz)
-    } else if sender == fizzBuzzButton {
+    case fizzBuzzButton:
       play(move: .fizzBuzz)
-    } else {
+    default:
       fatalError("Invalid button tap detected.")
     }
   }
