@@ -26,7 +26,11 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
-    play(move: .number)
+    if sender == numberButton {
+      play(move: .number)
+    } else {
+      play(move: .fizz)
+    }
   }
 
   func play(move: Move) {
