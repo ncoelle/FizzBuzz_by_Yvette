@@ -6,7 +6,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    gameScore = 0
   }
 
   override func didReceiveMemoryWarning() {
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
 
 
   func play(move: String) {
-    gameScore = 1
+    gameScore? += 1
   }
 }
 
