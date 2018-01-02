@@ -26,14 +26,10 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
-    guard let unwrappedScore = gameScore else {
-      fatalError("gameScore not initialized in ViewController")
-    }
-    let nextScore: Int = unwrappedScore + 1
-    play(move: "\(nextScore)")
+    play(move: .number)
   }
 
-  func play(move: String) {
+  func play(move: Move) {
     guard let unwrappedGame = game else {
       fatalError("Game is nil in ViewController")
     }

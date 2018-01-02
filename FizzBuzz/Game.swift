@@ -9,7 +9,7 @@ class Game {
     score = 0
   }
 
-  func play(move: String) -> (right: Bool, score: Int) {
+  func play(move: Move) -> (right: Bool, score: Int) {
 
     let result = brain.check(number: score + 1)
 

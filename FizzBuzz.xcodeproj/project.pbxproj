@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3834D9FA39A58721061FD811 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834D9C1BFEC58A91C00BD49 /* Move.swift */; };
 		3834DAE688AA8FA7A4D621D4 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834D04931214A842F283B31 /* Brain.swift */; };
 		3834DC169B8CB80AC4266A96 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834DA228CA8DBC8C9454561 /* Game.swift */; };
 		AD88D0B51FFA1B2D002D02C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88D0B41FFA1B2D002D02C0 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		3834D04931214A842F283B31 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		3834D9C1BFEC58A91C00BD49 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		3834DA228CA8DBC8C9454561 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		AD88D0B11FFA1B2D002D02C0 /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD88D0B41FFA1B2D002D02C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				AD88D0C01FFA1B2D002D02C0 /* Info.plist */,
 				3834D04931214A842F283B31 /* Brain.swift */,
 				3834DA228CA8DBC8C9454561 /* Game.swift */,
+				3834D9C1BFEC58A91C00BD49 /* Move.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AD88D0B51FFA1B2D002D02C0 /* AppDelegate.swift in Sources */,
 				3834DAE688AA8FA7A4D621D4 /* Brain.swift in Sources */,
 				3834DC169B8CB80AC4266A96 /* Game.swift in Sources */,
+				3834D9FA39A58721061FD811 /* Move.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
