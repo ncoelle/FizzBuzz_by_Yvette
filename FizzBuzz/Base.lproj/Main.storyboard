@@ -52,11 +52,15 @@
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x56-nt-OAK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXC-Hc-fQD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXC-Hc-fQD" userLabel="fizzBuzzButton">
                                         <rect key="frame" x="153" y="153" width="141" height="141"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzBuzzButton"/>
                                         <state key="normal" image="space" backgroundImage="button_border">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7A-j2-nKS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqv-Ou-wqA" userLabel="buzzButton">
                                         <rect key="frame" x="0.0" y="153" width="141" height="141"/>
