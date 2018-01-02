@@ -1,13 +1,8 @@
-//
-//  FizzBuzzTests
-//
-//  Copyright © 2018 Cölle Online. All rights reserved.
-//
-
 import XCTest
 @testable import FizzBuzz
 
 class BrainTests: XCTestCase {
+  let brain = Brain()
 
   override func setUp() {
     super.setUp()
@@ -20,7 +15,6 @@ class BrainTests: XCTestCase {
   }
 
   func testIsThreeDivisibleByThree() {
-    let brain = Brain()
     let result = brain.isDivisibleByThree(3)
 
     XCTAssertEqual(result, true,
@@ -28,10 +22,68 @@ class BrainTests: XCTestCase {
   }
 
   func testIsOneDivisibleByThree() {
-    let brain = Brain()
     let result = brain.isDivisibleByThree(1)
 
     XCTAssertEqual(result, false,
         "1 should not be divisible by 3")
+  }
+
+  func testIsFiveDivisibleByFive() {
+    let result = brain.isDivisibleByFive(5)
+
+    XCTAssertEqual(result, true,
+        "5 should be divisible by 5")
+  }
+
+  func testIsOneDivisibleByFive() {
+    let result = brain.isDivisibleByFive(1)
+
+    XCTAssertEqual(result, false,
+        "1 must not be divisible by 5")
+  }
+
+  func testIsFifteenDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(15)
+
+    XCTAssertEqual(result, true,
+        "15 should be divisible by 15")
+  }
+
+  func testIsThreeDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(3)
+
+    XCTAssertEqual(result, false,
+        "3 must not be divisible by 15")
+  }
+
+  func testIsFiveDivisibleByFifteen() {
+    let result = brain.isDivisibleByFifteen(3)
+
+    XCTAssertEqual(result, false,
+        "5 must not be divisible by 15")
+  }
+
+  func testSayFizz() {
+    let result = brain.check(number: 3)
+    XCTAssertEqual(result, Move.fizz,
+        "Divisible by 3 should return 'Fizz'")
+  }
+
+  func testSayBuzz() {
+    let result = brain.check(number: 5)
+    XCTAssertEqual(result, Move.buzz,
+        "Divisible by 5 should return 'Buzz'")
+  }
+
+  func testSayFizzBuzz() {
+    let result = brain.check(number: 15)
+    XCTAssertEqual(result, Move.fizzBuzz,
+        "Divisible by 15 should return 'FizzBuzz'")
+  }
+
+  func testOneReturnsOne() {
+    let result = brain.check(number: 1)
+    XCTAssertEqual(result, Move.number,
+        "Divisible by nothing should return 1")
   }
 }
