@@ -58,11 +58,15 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqv-Ou-wqA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqv-Ou-wqA" userLabel="buzzButton">
                                         <rect key="frame" x="0.0" y="153" width="141" height="141"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sIy-Nu-kfK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-3R-9A4">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="141"/>
@@ -114,6 +118,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buzzButton" destination="dqv-Ou-wqA" id="YTd-Vm-Sce"/>
+                        <outlet property="fizzButton" destination="5Sa-QN-oAD" id="H4q-fq-SPG"/>
+                        <outlet property="fizzBuzzButton" destination="GXC-Hc-fQD" id="urC-WQ-cfy"/>
                         <outlet property="numberButton" destination="CXj-3R-9A4" id="Uhk-Gp-uaB"/>
                     </connections>
                 </viewController>
