@@ -37,17 +37,59 @@ class GameTests: XCTestCase {
         "Score should increment by 2 after two moves")
   }
 
-  func testIfMoveIsCorrect() {
+  func testIfFizzMoveIsCorrect() {
     game.score = 2
     let result = game.play(move: "Fizz")
     XCTAssertEqual(result, true,
-        "Third move must be Fizz (3 is divisible by 3")
+        "Correct move not detected: Third move must be Fizz (3 is divisible by 3")
   }
 
-  func testIfMoveIsIncorrect() {
+  func testIfFizzMoveIsIncorrect() {
     game.score = 1
     let result = game.play(move: "Fizz")
     XCTAssertEqual(result, false,
         "Wrong move not detected: Second move must be '2' not 'Fizz'")
+  }
+
+  func testIfBuzzMoveIsCorrect() {
+    game.score = 4
+    let result = game.play(move: "Buzz")
+    XCTAssertEqual(result, true,
+        "Correct move not detected: Third move must be Fizz (5 is divisible by 5")
+  }
+
+  func testIfBuzzMoveIsIncorrect() {
+    game.score = 1
+    let result = game.play(move: "Buzz")
+    XCTAssertEqual(result, false,
+        "Wrong move not detected: Second move must be '2' not 'Buzz'")
+  }
+
+  func testIfFizzBuzzMoveIsCorrect() {
+    game.score = 14
+    let result = game.play(move: "FizzBuzz")
+    XCTAssertEqual(result, true,
+        "Correct move not detected: Must be FizzBuzz (15 is divisible by 15")
+  }
+
+  func testIfFizzBuzzMoveIsIncorrect() {
+    game.score = 1
+    let result = game.play(move: "FizzBuzz")
+    XCTAssertEqual(result, false,
+        "Wrong move not detected: Second move must be '2' not 'FizzBuzz'")
+  }
+
+  func testIfNumberMoveIsCorrect() {
+    game.score = 13
+    let result = game.play(move: "14")
+    XCTAssertEqual(result, true,
+        "Correct move not detected: Must be '14' (14 is not divisible by any FizzBuzz number")
+  }
+
+  func testIfNumberMoveIsIncorrect() {
+    game.score = 1
+    let result = game.play(move: "14")
+    XCTAssertEqual(result, false,
+        "Wrong move not detected: Second move must be '2' not '14'")
   }
 }
