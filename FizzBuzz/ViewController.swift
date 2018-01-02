@@ -3,7 +3,13 @@ import UIKit
 class ViewController: UIViewController {
 
   var game: Game?
-  var gameScore: Int?
+  var gameScore: Int? {
+    didSet {
+      numberButton.setTitle("1", for: .normal)
+    }
+  }
+
+  @IBOutlet weak var numberButton: UIButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -15,6 +21,9 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func buttonTapped(_ sender: UIButton) {
+    play(move: "1")
+  }
 
   func play(move: String) {
     guard let unwrappedGame = game else {
