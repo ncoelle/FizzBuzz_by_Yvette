@@ -31,4 +31,8 @@ class ViewControllerUnitTests: XCTestCase {
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 2)
   }
+
+  func testHasAGame() {
+    XCTAssertNotNil(viewController.game)
+  }
 }
